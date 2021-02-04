@@ -1,0 +1,95 @@
+### Setup and installation
+
+Install dotnet SDK -- version--5.0.101
+
+Install node.js --version 14.10.0
+
+
+
+
+
+## For enforcing https, run 'dotnet dev-certs https --trust'
+
+
+
+
+## For install globally ef core, run 'dotnet tool install --global dotnet-ef --version 5.0.1'
+
+
+
+
+
+## Now put your database Connection string inside 'appsettings.Development.json' file of API folder 
+which looks like,
+
+"ConnectionStrings": {
+    "DefaultConnection":"Data Source=.;Initial Catalog=chatingapp;Integrated Security=True;"
+  }
+
+Put your connection string to "DefaultConnection" variable.Here 'Data Source' contains the server name and 
+'Initial Catalog' contains database name.You should change those according to your connection string.
+
+
+
+
+
+
+
+## For migrations, run this command inside API folder 'dotnet ef migrations add Testing'
+
+
+
+
+
+## Finally update the database by running 'dotnet ef database update'
+
+
+
+
+
+
+##Then go to the project's client folder and install angular cli globally by running 'npm install -g @angular/cli'
+
+
+
+
+
+
+## Now go to the project's API folder and run the project 'dotnet run'
+
+Now here if you face any issue with the nuget packages run the command several times,it will work and install 
+the necessary nuget packages.
+
+
+
+
+
+
+
+##Now go to another terminal and go to the project's client folder and run 'ng serve' to run the angular app 
+
+Now our app will run at http://localhost:4200/
+
+
+
+
+
+
+##Browser 
+Google chrome is strongly recommended for this project for not to face  any CORS issue.
+
+Firefox and other browsers might cause CORS issue.
+
+For checking/log in two users at a time you can go to google chrome Incognito mode.
+
+If even google chrome facing CORS issue(it should not) you can go to the security disables chrome version
+simple running this command into WINDOWS+R (Run) command prompt,the command is,
+
+'chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security'
+
+
+
+
+Best of Luck.
+Rayhan Roman
+
